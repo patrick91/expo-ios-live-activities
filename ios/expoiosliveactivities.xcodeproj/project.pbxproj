@@ -23,6 +23,7 @@
 		CD19C903298EB7F700610A86 /* Example.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CD19C8FF298EB7F600610A86 /* Example.intentdefinition */; };
 		CD19C904298EB7F700610A86 /* Example.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = CD19C8FF298EB7F600610A86 /* Example.intentdefinition */; };
 		CD19C907298EB7F700610A86 /* ExampleExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CD19C8F3298EB7F600610A86 /* ExampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CD19C913298EE28A00610A86 /* RCTLiveActivityModule.m in Sources */ = {isa = PBXBuildFile; fileRef = CD19C912298EE28A00610A86 /* RCTLiveActivityModule.m */; };
 		E951AD067D694E95ADF4090D /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6893743409A146CE9FF7E407 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		CD19C8FF298EB7F600610A86 /* Example.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Example.intentdefinition; sourceTree = "<group>"; };
 		CD19C900298EB7F700610A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD19C902298EB7F700610A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD19C911298EE26500610A86 /* RCTLiveActivityModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTLiveActivityModule.h; sourceTree = "<group>"; };
+		CD19C912298EE28A00610A86 /* RCTLiveActivityModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTLiveActivityModule.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-expoiosliveactivities/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +113,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
 				6893743409A146CE9FF7E407 /* noop-file.swift */,
+				CD19C911298EE26500610A86 /* RCTLiveActivityModule.h */,
+				CD19C912298EE28A00610A86 /* RCTLiveActivityModule.m */,
 			);
 			name = expoiosliveactivities;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				CD19C913298EE28A00610A86 /* RCTLiveActivityModule.m in Sources */,
 				CD19C904298EB7F700610A86 /* Example.intentdefinition in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
 				E951AD067D694E95ADF4090D /* noop-file.swift in Sources */,
