@@ -19,12 +19,13 @@ struct ExampleAttributes: ActivityAttributes {
     var name: String
 }
 
+@available(iOS 16.1, *)
 struct ExampleLiveActivity: Widget {
-    var body: some WidgetConfiguration {
+  var body: some WidgetConfiguration {
         ActivityConfiguration(for: ExampleAttributes.self) { context in
             // Lock screen/banner UI goes here
             VStack {
-                Text("Hello")
+              Text("Hello \(context.state.value)")
             }
             .activityBackgroundTint(Color.cyan)
             .activitySystemActionForegroundColor(Color.black)
