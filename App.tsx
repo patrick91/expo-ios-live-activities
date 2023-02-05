@@ -1,12 +1,21 @@
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { StyleSheet, Text, View, Button, NativeModules } from "react-native";
+import { useInterval } from "./hooks/use-interval";
 // const {CalendarModule} = NativeModules;
 
 export default function App() {
   console.log(NativeModules.LiveActivityManager);
 
   const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  useInterval(() => {
+    if (!started) return;
+
+    NativeModules.LiveActivityManager.updateTimer(count);
+    setCount(count + 1);
+  }, 1000);
 
   // NativeModules.LiveActivityModule.createCalendarEvent("A", "B");
   return (
@@ -17,10 +26,7 @@ export default function App() {
         onPress={() => {
           if (count === 0) {
             NativeModules.LiveActivityManager.addEvent("A", "B", 1);
-            setCount(1);
-          } else {
-            NativeModules.LiveActivityManager.updateTimer(count);
-            setCount(count + 1);
+            setStarted(true);
           }
         }}
         title="Click me"

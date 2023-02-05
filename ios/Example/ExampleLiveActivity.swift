@@ -12,7 +12,8 @@ import SwiftUI
 struct ExampleAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
-        var value: Int
+        var value: Date
+        var endsAt: Date
     }
 
     // Fixed non-changing properties about your activity go here!
@@ -23,11 +24,22 @@ struct ExampleAttributes: ActivityAttributes {
 struct ExampleLiveActivity: Widget {
   var body: some WidgetConfiguration {
         ActivityConfiguration(for: ExampleAttributes.self) { context in
-            // Lock screen/banner UI goes here
+            let diff =  Date()...context.state.endsAt;
+
             VStack {
-              Text("Hello \(context.state.value)")
+              Text("Introduction to Network Analysis by Analyzing Characters in Harry Potter Fanfiction")
+                .bold()
+              ProgressView(timerInterval: diff, countsDown: false)
+
+              Text("Next: break")
+
             }
-            .activityBackgroundTint(Color.cyan)
+            .padding(16)
+            .overlay(
+                RoundedRectangle(cornerRadius: 23)
+                    .stroke(.black, lineWidth: 8)
+            )
+            .activityBackgroundTint(Color(red: 1.00, green: 0.67, blue: 0.00))
             .activitySystemActionForegroundColor(Color.black)
             
         } dynamicIsland: { context in
@@ -41,11 +53,20 @@ struct ExampleLiveActivity: Widget {
                     Text("Trailing")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
+                  let diff =  Date()...context.state.endsAt;
+                      
+                  ProgressView(timerInterval: diff)
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+              let diff = context.state.endsAt.timeIntervalSinceNow;
+              
+              if (diff > 290) {
+                Text(context.state.endsAt, style: .timer).foregroundColor(.red)
+              } else {
+                Text(context.state.endsAt, style: .timer).foregroundColor(.blue)
+              }
+              
             } compactTrailing: {
                 Text("T")
             } minimal: {

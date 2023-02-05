@@ -15,8 +15,9 @@ class LiveActivityManager: NSObject {
        // Create the activity attributes and activity content objects.
        // ...
        
-       // Start the Live Activity.
-       let initialContentState = ExampleAttributes.ContentState(value: 1)
+       let startTime : Date = .now;
+       let endTime = startTime + 5 * 60;
+       let initialContentState = ExampleAttributes.ContentState(value: startTime, endsAt: endTime)
        do {
          let deliveryActivity = try Activity.request(attributes: ExampleAttributes(name: "abc"), contentState: initialContentState)
          print("done")
@@ -24,6 +25,7 @@ class LiveActivityManager: NSObject {
          print("Error requesting pizza delivery Live Activity \(error.localizedDescription).")
        }
      }
+     
    } else {
      // Fallback on earlier versions
    }
@@ -34,13 +36,13 @@ class LiveActivityManager: NSObject {
     
     if #available(iOS 16.1, *) {
 
-      let state = ExampleAttributes.ContentState(value: Int(value))
-
-          Task {
-            for activity in Activity<ExampleAttributes>.activities {
-              await activity.update(using: state)
-            }
-          }
+//      let state = ExampleAttributes.ContentState(value: Int(value))
+//
+//          Task {
+//            for activity in Activity<ExampleAttributes>.activities {
+//              await activity.update(using: state)
+//            }
+//          }
         }
   }
 
