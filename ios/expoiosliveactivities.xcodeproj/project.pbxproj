@@ -26,6 +26,8 @@
 		CD19C913298EE28A00610A86 /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD19C912298EE28A00610A86 /* LiveActivityManager.swift */; };
 		CD19C916298EE74800610A86 /* LiveActivityManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = CD19C915298EE74800610A86 /* LiveActivityManagerBridge.m */; };
 		CD19C917298EEA7800610A86 /* ExampleLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD19C8FB298EB7F600610A86 /* ExampleLiveActivity.swift */; };
+		CD19C91929904CB000610A86 /* CurrentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD19C91829904CB000610A86 /* CurrentEvent.swift */; };
+		CD19C91A29904CB000610A86 /* CurrentEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD19C91829904CB000610A86 /* CurrentEvent.swift */; };
 		E951AD067D694E95ADF4090D /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6893743409A146CE9FF7E407 /* noop-file.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,7 @@
 		CD19C912298EE28A00610A86 /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
 		CD19C914298EE68300610A86 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		CD19C915298EE74800610A86 /* LiveActivityManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveActivityManagerBridge.m; sourceTree = "<group>"; };
+		CD19C91829904CB000610A86 /* CurrentEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEvent.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-expoiosliveactivities/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +189,7 @@
 		CD19C8F8298EB7F600610A86 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				CD19C91829904CB000610A86 /* CurrentEvent.swift */,
 				CD19C8F9298EB7F600610A86 /* ExampleBundle.swift */,
 				CD19C8FB298EB7F600610A86 /* ExampleLiveActivity.swift */,
 				CD19C8FD298EB7F600610A86 /* Example.swift */,
@@ -266,10 +270,12 @@
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = BV3TXK3SL8;
 						LastSwiftMigration = 1250;
 					};
 					CD19C8F2298EB7F600610A86 = {
 						CreatedOnToolsVersion = 14.1;
+						DevelopmentTeam = BV3TXK3SL8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -397,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD19C91929904CB000610A86 /* CurrentEvent.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				CD19C913298EE28A00610A86 /* LiveActivityManager.swift in Sources */,
@@ -414,6 +421,7 @@
 			files = (
 				CD19C8FA298EB7F600610A86 /* ExampleBundle.swift in Sources */,
 				CD19C903298EB7F700610A86 /* Example.intentdefinition in Sources */,
+				CD19C91A29904CB000610A86 /* CurrentEvent.swift in Sources */,
 				CD19C8FC298EB7F600610A86 /* ExampleLiveActivity.swift in Sources */,
 				CD19C8FE298EB7F600610A86 /* Example.swift in Sources */,
 			);
@@ -439,6 +447,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = expoiosliveactivities/expoiosliveactivities.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV3TXK3SL8;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -471,6 +480,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = expoiosliveactivities/expoiosliveactivities.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BV3TXK3SL8;
 				INFOPLIST_FILE = expoiosliveactivities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -614,6 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BV3TXK3SL8;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -651,6 +662,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BV3TXK3SL8;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Info.plist;
